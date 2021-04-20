@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clearfix::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.float{
+  float: left;
+}
+body{
+  background-color: rgb(179, 222, 236) ;
+}
+/* /comandi generali */
+/* sito */
+.wrapper{
+  position: relative;
+  margin-top: 200px;
+}
+/* frecce */
+.arrow{
+  width: 25%;
+  position: relative;
+  height: 600px;
+}
+.arrow.a-left i{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 90%; 
+  color: #4e5053;
+}
+.arrow.a-right i{
+  position: absolute; 
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10%;
+}
+.arrow i{
+  font-size: 40px;
+}
+/*/ frecce */
+/* immagine e circle */
+.slide-img{
+  text-align: center;
+  width: 50%;
+  height: 600px;
+}
+img{
+  width: 100%;
+  display: none;
+}
+.active{
+  display: inline-block;
+}
+.contain-img{
+  position: relative;
+}
+.circle-scroll{
+  position: absolute;
+  width: 15%;
+  height: 30px;
+  left: 50%;
+  bottom:50px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.circle-scroll i{
+  color: rgb(32, 90, 197);
+  
+}
+.circle-active{
+  background-color: rgb(32, 90, 197);
+  overflow: hidden;
+  border-radius: 50%;
+}
+/* immagine e circle */
+/* /sito */

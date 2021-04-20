@@ -1,0 +1,3 @@
+https://github.com/Stefano-Corradi-Boolean-32/jquery-2.git
+
+https://github.com/Stefano-Corradi-Boolean-32/hamburger-menu.git
