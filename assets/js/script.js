@@ -14,14 +14,32 @@ $(document).ready(function(){
   nextImg.click(function(){
     var circle = $('.circle-scroll i.circle-active');
     var immage = $('img.active');
-    circle.removeClass('.circle-active');
-    immage.removeClass('.active');
+
+    circle.removeClass('circle-active');
+    immage.removeClass('active');
+
     if(immage.hasClass('last')){
-      $('.img.first').addClass('.active');
-      $('.circle-scroll i.first').addClass('.active');
+      $('img.first').addClass('active');
+      $('.circle-scroll i.first').addClass('circle-active');
     }else{
-      immage.next('img').addClass('.active');
-      circle.next('.circle-scroll i').addClass('.circle-active');
+      immage.next('img').addClass('active');
+      circle.next('.circle-scroll i').addClass('circle-active');
+    }
+  });
+
+  prevImg.click(function(){
+    var circle = $('.circle-scroll i.circle-active');
+    var immage = $('img.active');
+
+    circle.removeClass('circle-active');
+    immage.removeClass('active');
+
+    if(immage.hasClass('first')){
+      $('img.last').addClass('active');
+      $('.circle-scroll i.last').addClass('circle-active');
+    }else{
+      immage.prev('img').addClass('active');
+      circle.prev('.circle-scroll i').addClass('circle-active');
     }
   });
 
