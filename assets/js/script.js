@@ -7,4 +7,22 @@ $(document).ready(function(){
     arrCircle.html('<i class="far fa-circle"></i>');
   } */
 
+  //creo i comando che cliccando sulle frecce cambio l'immagine
+  var nextImg = $('.a-right i');
+  var prevImg = $('.a-left i');
+
+  nextImg.click(function(){
+    var circle = $('.circle-scroll i.circle-active');
+    var immage = $('img.active');
+    circle.removeClass('.circle-active');
+    immage.removeClass('.active');
+    if(immage.hasClass('last')){
+      $('.img.first').addClass('.active');
+      $('.circle-scroll i.first').addClass('.active');
+    }else{
+      immage.next('img').addClass('.active');
+      circle.next('.circle-scroll i').addClass('.circle-active');
+    }
+  });
+
 })
