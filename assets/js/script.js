@@ -13,32 +13,32 @@ $(document).ready(function(){
 
   nextImg.click(function(){
     var circle = $('.circle-scroll i.circle-active');
-    var immage = $('img.active');
+    var immage = $('.contain-img img.active');
 
     circle.removeClass('circle-active');
     immage.removeClass('active');
-
-    if(immage.hasClass('last')){
-      $('img.first').addClass('active');
-      $('.circle-scroll i.first').addClass('circle-active');
+    
+    if(immage.next('.contain-img img').length === 0){
+      $('.contain-img img').first().addClass('active');
+      $('.circle-scroll i').first().addClass('circle-active');
     }else{
-      immage.next('img').addClass('active');
+      immage.next('.contain-img img').addClass('active');
       circle.next('.circle-scroll i').addClass('circle-active');
     }
   });
 
   prevImg.click(function(){
     var circle = $('.circle-scroll i.circle-active');
-    var immage = $('img.active');
+    var immage = $('.contain-img img.active');
 
     circle.removeClass('circle-active');
     immage.removeClass('active');
 
-    if(immage.hasClass('first')){
-      $('img.last').addClass('active');
-      $('.circle-scroll i.last').addClass('circle-active');
+    if(immage.prev('.contain-img img').length === 0){
+      $('.contain-img img').last().addClass('active');
+      $('.circle-scroll i').last().addClass('circle-active');
     }else{
-      immage.prev('img').addClass('active');
+      immage.prev('.contain-img img').addClass('active');
       circle.prev('.circle-scroll i').addClass('circle-active');
     }
   });
