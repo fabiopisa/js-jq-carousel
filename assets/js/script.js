@@ -43,4 +43,38 @@ $(document).ready(function(){
     }
   });
 
-})
+  // per generare i pallini devo sapere quante foto ci sono
+    //col ciclo each() percorro tutta la collection di '.images img'
+    // e ottengo l'index che mi serve per capire quale è il primo (=== 0)
+    /* $('.images img').each(function(index){ */
+        
+      //console.log('index: ' + index );
+      /* var nav = $('.nav'); */
+      // creo un asctringa vuota perché di default non c'è la classe active
+      /* var active = ""; */
+      // diventa "active" solo nell'elemnto 0
+      /* if(index === 0) active = "active"; */
+      // genereo la stringa da stampare
+      /* var tag = '<i class="fas fa-circle ' + active + '"></i>'; */
+      // append a .nav
+      /* nav.append(tag); */
+
+  /* }); */
+
+  //aggiungo un listener 'click' a tutti i (.nav i) generati dinammicamente
+ /*  $('.nav i').on('click',function(){ */
+
+      //l'index dellelemento cliccato mi serve per cercare la img corrispondente
+      /* var index = $(this).index();
+      console.log('index: '+ index); */
+      // rimuovo active dagli elementi attivi
+      /* $('.nav i.active').removeClass('active');
+      $('.images img.active').removeClass('active'); */
+      // con eq() cerco l'elemto con indice index e gli aggiungo la classe active
+      /* $('.images img').eq(index).addClass('active'); */
+      // all'elemnto cliccato aggiungo la classe active
+     /*  $(this).addClass('active'); */
+
+  /* }); */
+
+}); 
