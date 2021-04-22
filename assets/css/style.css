@@ -24,7 +24,7 @@ body{
 .arrow{
   width: 25%;
   position: relative;
-  height: 600px;
+  height: 60vh;
 }
 .arrow.a-left i{
   position: absolute;
@@ -50,7 +50,7 @@ body{
 .slide-img{
   text-align: center;
   width: 50%;
-  height: 600px;
+  height: 60vh;
 }
 img{
   width: 100%;
